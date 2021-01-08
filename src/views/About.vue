@@ -1,5 +1,14 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <Imagen texto="Información General." />
   </div>
 </template>
+<script>
+import Imagen from "@/components/Imagen.vue";
+export default {
+  name: "About",
+  components: {
+    Imagen,
+  },
+};
+</script>
