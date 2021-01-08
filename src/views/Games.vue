@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h3>Información de Juegos</h3>
     <Table />
   </div>
 </template>
