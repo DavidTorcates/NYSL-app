@@ -98,4 +98,15 @@ b-container {
   #nav a {
     color: #42b983; }
 
+/* estilos para formulario */
+.form {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10pt;
+  border-radius: 15px; }
+  .form button {
+    background-color: #e56842 !important;
+    border: #e56842;
+    margin-left: 10pt;
+    margin-right: 10pt; }
+
 /* pages/home */

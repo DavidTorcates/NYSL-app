@@ -1,0 +1,12 @@
+/* estilos para formulario */
+.form {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10pt;
+  border-radius: 15px;
+  button {
+    background-color: $color-primario !important;
+    border: $color-primario;
+    margin-left: 10pt;
+    margin-right: 10pt;
+  }
+}
