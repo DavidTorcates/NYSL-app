@@ -1,10 +1,9 @@
 <template>
   <div id="app">
     <Navbar />
-    <b-container fluid>
+    <b-container>
       <transition  name="fade">
         <router-view />
-        
       </transition>
     </b-container>
   </div>
