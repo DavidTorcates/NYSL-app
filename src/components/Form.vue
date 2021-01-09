@@ -1,54 +1,72 @@
 <template>
-  <div b-class="row">
-    <div class="col-md-12">
-      <p>¿Tienes alguna consulta sobre algún partido?</p>
-      <p>Escríbenos y te contactaremos a la brevedad</p>
-      <b-form action="#" method="post">
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col-3 col-md-5 col-sm-5">
-            <label for="nombre">Nombre:</label>
-          </div>
-          <div class="col-2 col-md-5 col-sm-5">
-            <input type="text" name="nombre" id="nombre" />
-          </div>
-          <div class="col-4"></div>
-        </div>
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col-3">
-            <label for="email"> E-Mail:</label>
-          </div>
-          <div class="col-2">
-            <input type="text" name="email" id="email" />
-          </div>
-          <div class="col-4"></div>
-        </div>
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col-3">
-            <label for="consulta">Consulta:</label>
-          </div>
-          <div class="col-2">
-            <input type="text" name="consulta" id="consulta" />
-          </div>
-          <div class="col-4"></div>
-        </div>
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col-3">
-            <input type="submit" value="Enviar" class="btn-primary c-warning" />
-          </div>
-          <div class="col-6"></div>
-        </div>
-      </b-form>
-    </div>
+  <div>
+    <b-form @submit="onSubmit" @reset="onReset" v-if="show" class="form">
+      <b-form-group
+        id="input-group-1"
+        label="Correo electrónico:"
+        label-for="input-1"
+      >
+        <b-form-input
+          id="input-1"
+          v-model="form.email"
+          type="email"
+          placeholder="Escriba su correo elctrónico"
+          required
+        ></b-form-input>
+      </b-form-group>
+
+      <b-form-group id="input-group-2" label="Nombre y apellido:" label-for="input-2">
+        <b-form-input
+          id="input-2"
+          v-model="form.name"
+          placeholder="Escriba su nombre y apellido"
+          required
+        ></b-form-input>
+      </b-form-group>
+
+      <b-form-group id="input-group-3" label="Ingrese su consulta:" label-for="input-3">
+        <b-form-textarea
+          id="input-3"
+          v-model="form.message"
+          required
+        ></b-form-textarea>
+      </b-form-group>
+
+      <b-button type="submit" variant="success">Enviar</b-button>
+      <b-button type="reset" variant="success">Limpiar</b-button>
+    </b-form>
   </div>
 </template>
 
 <script>
-export default {
-  name: "Form",
-  props: {},
-};
+  export default {
+    data() {
+      return {
+        form: {
+          email: '',
+          name: '',
+          message: '',
+        },
+        show: true
+      }
+    },
+    methods: {
+      onSubmit(event) {
+        event.preventDefault()
+        alert(JSON.stringify(this.form))
+      },
+      onReset(event) {
+        event.preventDefault()
+        // Reset our form values
+        this.form.email = ''
+        this.form.name = ''
+        this.form.message = ''
+        // Trick to reset/clear native browser form validation state
+        this.show = false
+        this.$nextTick(() => {
+          this.show = true
+        })
+      }
+    }
+  }
 </script>

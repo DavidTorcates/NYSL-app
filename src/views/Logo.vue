@@ -9,11 +9,11 @@
 
 <style lang="scss">
 #logoinicio {
-  width: 60px;
-  height: 60px;
-  position: relative;
-  top: -15px;
-  left: 0px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 8px;
+  left: 2%;
   padding: 0px;
   border-radius: 100%;
   box-shadow: 0px 0px 10px 10px #033949;
