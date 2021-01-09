@@ -6,6 +6,7 @@ import About from '../views/About.vue'
 import Rules from '../views/Rules.vue'
 import Contact from '../views/Contact.vue'
 import Games from '../views/Games.vue'
+import Details from '../views/Details.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -41,6 +42,11 @@ const routes = [
     path: '/Info',
     name: 'Games',
     component: Games
+  },
+  {
+    path: '/Details',
+    name: 'Details',
+    component: Details
   }
 ]
 

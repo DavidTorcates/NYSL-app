@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <Navbar />
-    <transition name="bounce">
-      <b-container><router-view /></b-container>
-    </transition>
+    <b-container>
+      <transition  name="fade">
+        <router-view />
+      </transition>
+    </b-container>
   </div>
 </template>
 

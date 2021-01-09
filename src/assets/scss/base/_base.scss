@@ -1,4 +1,4 @@
-$color-primario: #e56842;
+$color-primario: #ADE542;
 $color-secundario: #264357; 
 $color-navbar: #1D3342;
 $text-color: white;
@@ -13,23 +13,33 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center; 
 }
-svg{
-  background: #ffffff48;
-  color: black;
-  border-radius:10px ;
+//...... Menu hambuerguesa
+.navbar-toggler {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -12px;
 }
-
-#nav {
-  padding: 30px 30px 0px 30px;
-  background:$color-secundario;
-  margin-bottom: 20px;
+//..... Navbar
+.nav {
+  padding:20px 30px 0px 30px;
+  background:$color-navbar !important;
+  
 }
-#nav a {
+h3{
+    position: absolute;
+    top: 2%;
+    left: 42%;
+}
+.nav-item{
+    padding: 0px ;
+}
+.nav a {
   font-weight: bold;
-  color: #D1D7C7;
+  color: #D1D7C7 !important;
 }
-#nav a.router-link-exact-active {
-  color: #A3FF15;
+.nav a.router-link-exact-active {
+  color: #A3FF15 !important;
 }
 #carta {
   .card {
@@ -87,6 +97,14 @@ svg{
 
 
 //------- Transiciones --------
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .6s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+
+#app{
 .bounce-enter-active {
   animation: bounce-in .5s;
 }
@@ -105,7 +123,71 @@ svg{
     transform: scale(0.5);
   }
 }
-//----- Games ----
-b-container{
-  border: solid 1px white;
+}
+//----- Información de juegos ----
+.tabla {
+        border: none;
+        background-color: rgba(255, 255, 255, 0.301);
+        margin-top: 25px;
+        border-radius: 10px;
+        
+}
+
+.b-table > thead {
+    color: $color-navbar !important;
+    border-top: 2px solid $color-secundario;
+}
+.b-table > tbody{
+    color: $color-primario;    
+}
+.b-table > tbody > tr:hover{
+    box-shadow: 0px 0px 8px 2px $color-primario;
+    font-size: 1em;
+    transition: 0.4s;
+    border-radius: 10px;
+    position: relative;
+    
+}
+.b-table > tbody > tr:active{
+    padding: 0px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: 0.1s;
+}
+.btn{
+    background-color:$color-primario ;
+    color: $color-navbar;
+    border-radius: 15px;
+    
+}
+.iframe{
+    background-color:#fbfdf938 ;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 15px;
+    margin: 2% 20%;
+    .mapa{
+        border-radius: 20px;
+    }
+}
+.btn:hover{
+    box-shadow:0px 0px 4px 1.5px  #d7c7c798  ;    
+}
+label{
+    background-color: rgba(255, 255, 255, 0.356);
+    border-radius: 15px;
+    text-align: justify;
+    color: $color-navbar;
+    margin-top: 10px;
+    padding: 10px;
+    width: 65%;
+}
+label {
+ b {
+    font-size: 25px;
+}
+}
+.btn2{
+    width: 40% ;
+    padding: 15px;
+    font-size: 1.3em;
 }

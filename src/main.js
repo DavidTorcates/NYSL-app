@@ -5,8 +5,11 @@ import router from './router';
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+
 //----- Importe de estilos CSS propios del proyecto
 import './assets/css/main.css'; 
+//------ Importe de efectos de JS para menu hamburguesa
+
 
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
