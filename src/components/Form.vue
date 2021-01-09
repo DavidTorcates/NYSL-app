@@ -32,8 +32,8 @@
         ></b-form-textarea>
       </b-form-group>
 
-      <b-button type="submit" variant="primary">Enviar</b-button>
-      <b-button type="reset" variant="primary">Limpiar</b-button>
+      <b-button type="submit" variant="success">Enviar</b-button>
+      <b-button type="reset" variant="success">Limpiar</b-button>
     </b-form>
   </div>
 </template>

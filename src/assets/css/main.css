@@ -173,9 +173,10 @@ label b {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10pt;
   border-radius: 15px; }
+  .form .form-group label {
+    background-color: rgba(255, 255, 255, 0);
+    color: white; }
   .form button {
-    background-color: #e56842 !important;
-    border: #e56842;
     margin-left: 10pt;
     margin-right: 10pt; }
 
