@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar />
+    <Navbar :page="$route.name"/>
     <b-container>
       <transition  name="fade">
         <router-view />

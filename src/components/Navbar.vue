@@ -5,6 +5,7 @@
         <img id="logoinicio" alt="Futbol logo" src="../assets/nysl_logo.png" />
       </router-link>
     </b-navbar-brand>
+    <h3>{{ page }}</h3>
     
     <b-navbar-toggle target="navbar-toggle-collapse">
       <template #default="{ expanded }">
@@ -50,6 +51,9 @@
 <script>
 export default {
   name: "Navbar",
+  props: {
+    page: String
+  }
 };
 </script>
 

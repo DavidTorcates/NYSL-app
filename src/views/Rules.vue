@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h3>Reglas y Políticas</h3>
     <p>
       Las reglas de la FIFA regirán el juego de NYSL excepto según se modifique
       en el presente documento

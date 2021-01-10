@@ -17,7 +17,7 @@ const routes = [
   },
   {
     path: '/About',
-    name: 'About',
+    name: 'Sobre Nosotros',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -25,27 +25,27 @@ const routes = [
   },
   {
     path: '/Home',
-    name: 'Home',
+    name: 'Inicio',
     component: Home
   },
   {
     path: '/Rules',
-    name: 'Rules',
+    name: 'Reglas y Políticas',
     component: Rules
   },
   {
     path: '/Contact',
-    name: 'Contact',
+    name: 'Contacto',
     component: Contact
   },
   {
     path: '/Info',
-    name: 'Games',
+    name: 'Información de Juegos',
     component: Games
   },
   {
     path: '/Details',
-    name: 'Details',
+    name: 'Detalles del Partido',
     component: Details
   }
 ]

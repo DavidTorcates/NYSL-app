@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h3>Contacto</h3>
     <Form />
   </div>
 </template>

@@ -10,18 +10,17 @@
     >
       <template #cell(seleccionar)="row">
         <router-link to="/Details">
-          <b-button variant="success" size="sm" @click="row.toggleDetails" class="mr-2">
+          <b-button
+            variant="success"
+            size="sm"
+            @click="row.toggleDetails"
+            class="mr-2"
+          >
             Ver Mapa
-          </b-button></router-link
-        >
+          </b-button>
+        </router-link>
       </template>
     </b-table>
-    <!--<router-link to="/Details"
-      ><b-button variant="success">
-        <b>Partido 3</b> <br />
-        23/01/2020 10:00
-      </b-button>
-    </router-link>-->
   </div>
 </template>
 

@@ -9,6 +9,39 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center; }
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.6s; }
+
+.fade-enter, .fade-leave-to {
+  opacity: 0; }
+
+#app .bounce-enter-active {
+  animation: bounce-in 0.5s; }
+
+#app .bounce-leave-active {
+  animation: bounce-in 0.5s reverse; }
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0); }
+  50% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0.5); } }
+
+.container {
+  margin-top: 20pt; }
+
+.btn {
+  background-color: #ade542;
+  color: #1d3342;
+  border-radius: 15px; }
+
+.btn:hover {
+  box-shadow: 0px 0px 4px 1.5px #d7c7c798; }
+
+/* components/navbar */
 .navbar-toggler {
   width: 50px;
   height: 50px;
@@ -17,12 +50,7 @@ body {
 
 .nav {
   padding: 20px 30px 0px 30px;
-  background: #1D3342 !important; }
-
-h3 {
-  position: absolute;
-  top: 2%;
-  left: 42%; }
+  background: #1d3342 !important; }
 
 .nav-item {
   padding: 0px; }
@@ -34,9 +62,22 @@ h3 {
 .nav a.router-link-exact-active {
   color: #A3FF15 !important; }
 
+/* components/form */
+.form {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10pt;
+  border-radius: 15px; }
+  .form .form-group label {
+    background-color: rgba(255, 255, 255, 0);
+    color: white; }
+  .form button {
+    margin-left: 10pt;
+    margin-right: 10pt; }
+
+/* components/card */
 #carta .card {
   color: black;
-  background: #ADE542;
+  background: #ade542;
   border-radius: 15px;
   margin-top: 25px; }
 
@@ -75,109 +116,33 @@ h3 {
 .card:hover {
   box-shadow: 0px 0px 10px black; }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .6s; }
-
-.fade-enter, .fade-leave-to {
-  opacity: 0; }
-
-#app .bounce-enter-active {
-  animation: bounce-in .5s; }
-
-#app .bounce-leave-active {
-  animation: bounce-in .5s reverse; }
-
-@keyframes bounce-in {
-  0% {
-    transform: scale(0); }
-  50% {
-    transform: scale(1); }
-  100% {
-    transform: scale(0.5); } }
-
+/* pages/home */
+/* components/table */
 .tabla {
   border: none;
   background-color: rgba(255, 255, 255, 0.301);
-  margin-top: 25px;
   border-radius: 10px; }
+  .tabla thead {
+    color: #1d3342 !important;
+    border-top: 2px solid #264357; }
+  .tabla tbody {
+    color: #ade542; }
+    .tabla tbody tr:hover {
+      box-shadow: 0px 0px 8px 2px #ade542;
+      font-size: 1em;
+      transition: 0.4s;
+      border-radius: 10px;
+      position: relative; }
+    .tabla tbody tr:active {
+      padding: 0px;
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+      transition: 0.1s; }
 
-.b-table > thead {
-  color: #1D3342 !important;
-  border-top: 2px solid #264357; }
-
-.b-table > tbody {
-  color: #ADE542; }
-
-.b-table > tbody > tr:hover {
-  box-shadow: 0px 0px 8px 2px #ADE542;
-  font-size: 1em;
-  transition: 0.4s;
-  border-radius: 10px;
-  position: relative; }
-
-.b-table > tbody > tr:active {
-  padding: 0px;
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-  transition: 0.1s; }
-
-.btn {
-  background-color: #ADE542;
-  color: #1D3342;
-  border-radius: 15px; }
-
+/* components/iframe */
 .iframe {
   background-color: #fbfdf938;
   border-radius: 20px;
-  width: fit-content;
-  padding: 15px;
-  margin: 2% 20%; }
+  padding: 15px; }
   .iframe .mapa {
-    border-radius: 20px; }
-
-.btn:hover {
-  box-shadow: 0px 0px 4px 1.5px  #d7c7c798; }
-
-label {
-  background-color: rgba(255, 255, 255, 0.356);
-  border-radius: 15px;
-  text-align: justify;
-  color: #1D3342;
-  margin-top: 10px;
-  padding: 10px;
-  width: 65%; }
-
-label b {
-  font-size: 25px; }
-
-.btn2 {
-  width: 40%;
-  padding: 15px;
-  font-size: 1.3em; }
-
-/* components/navbar */
-#nav {
-  background-color: #1D3342; }
-  #nav h3 {
-    margin: 40px 0 0; }
-  #nav ul {
-    list-style-type: none;
-    padding: 0; }
-  #nav li {
-    display: inline-block;
-    margin: 0 10px; }
-  #nav a {
-    color: #42b983; }
-
-/* estilos para formulario */
-.form {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 10pt;
-  border-radius: 15px; }
-  .form .form-group label {
-    background-color: rgba(255, 255, 255, 0);
-    color: white; }
-  .form button {
-    margin-left: 10pt;
-    margin-right: 10pt; }
-
-/* pages/home */
+    border-radius: 20px;
+    width: 80%; }
