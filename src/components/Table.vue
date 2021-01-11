@@ -10,17 +10,11 @@
       fixed
       responsive="sm"
     >
-      <template #cell(seleccionar)="row" >
-        <router-link to="/Details">
-          <b-button
-            variant="success"
+       <template #cell(seleccionar)="row" >
+          <b-icon-zoom-in 
             size="sm"
             @click="row.toggleDetails"
-            class="mr-2"
-          >
-            Ver Mapa
-          </b-button>
-        </router-link>
+            id="icon"/> 
       </template>
     </b-table>
   </div>
@@ -28,6 +22,7 @@
 
 <script>
 export default {
+  name: "Table",
   data() {
     return {
       fields: ["septiembre", "equipos", "ubicación", "Seleccionar"],

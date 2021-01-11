@@ -9,7 +9,7 @@
     border-top: 2px solid $color-secundario;
   }
   tbody {
-    color: $color-primario;
+    color:$color-primario;
     tr:hover {
       box-shadow: 0px 0px 8px 2px $color-primario;
       font-size: 1em;
@@ -22,7 +22,10 @@
       box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
       transition: 0.1s;
     }
-    
+     
+    td:nth-last-child(1) {
+      #icon{
+      font-size: 1.3em;
+    }}
   }
 }
-

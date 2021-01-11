@@ -1,5 +1,6 @@
 <template>
-  <div id="imagen">
+  <div id="Image">
+    <h3>Misión</h3>
     <div class="card">
       <img
         id="img"
@@ -8,13 +9,14 @@
         alt="Image 1"
       />
       <div class="card-img-overlay" id="text">
-        <p class="card-text">
+        <p class="card-text" >
           <b>
             {{ texto }}
           </b>
         </p>
       </div>
     </div>
+     <h3>Visión</h3>
     <div class="card">
       <img
         id="img"
@@ -30,6 +32,7 @@
         </p>
       </div>
     </div>
+     <h3>Información General</h3>
     <div class="card">
       <img
         id="img"
@@ -50,7 +53,7 @@
 
 <script>
 export default {
-  name: "Imagen",
+  name: "Img",
   props: {
     texto: String,
   },
