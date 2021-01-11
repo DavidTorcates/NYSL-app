@@ -38,6 +38,11 @@ const routes = [
     path: '/Info',
     name: 'Información de Juegos',
     component: Games
+  },
+  {
+    path: '/',
+    name: 'Logo',
+    component: Logo
   }
 ]
 
