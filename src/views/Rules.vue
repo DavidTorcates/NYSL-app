@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+    <router-link class="navbar-brand" to="/">
+        <img id="logoinicio" alt="Futbol logo" src="../assets/nysl_logo.png" />
+    </router-link>
     <p>
       Las reglas de la FIFA regirán el juego de NYSL excepto según se modifique
       en el presente documento

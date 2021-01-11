@@ -1,5 +1,9 @@
 <template>
   <div>
+    <router-link class="navbar-brand" to="/">
+        <img id="logoinicio" alt="Futbol logo" src="../assets/nysl_logo.png" />
+    </router-link>
+    
     <b-row>
       <b-col lg="6" sm="7" md="6" xl="6">
         <Table />

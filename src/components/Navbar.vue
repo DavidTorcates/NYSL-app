@@ -1,9 +1,6 @@
  <template>
-  <b-navbar toggleable type="dark" class="nav">
+  <b-navbar toggleable type="dark" class="nav sidenav">
     <b-navbar-brand href="#">
-      <router-link class="navbar-brand" to="/">
-        <img id="logoinicio" alt="Futbol logo" src="../assets/nysl_logo.png" />
-      </router-link>
     </b-navbar-brand>
     <h3>{{ page }}</h3>
     
