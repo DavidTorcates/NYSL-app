@@ -1,14 +1,14 @@
 <template>
-  <div class="container">
+  <div class="container" id="fondo">
     <router-link class="navbar-brand" to="/Welcome">
         <img id="logoinicio" alt="Futbol logo" src="../assets/nysl_logo.png" />
     </router-link>
-    <p>
+    <h3>
       Las reglas de la FIFA regirán el juego de NYSL excepto según se modifique
       en el presente documento
-    </p>
+    </h3>
     <br />
-    <H2>Deportividad</H2>
+    <H4>Deportividad</H4>
     <p>
       El interés común que comparten los miembros de la Asociación es inspirar a
       los jóvenes a practicar los ideales de deportividad y juego limpio.
@@ -18,7 +18,7 @@
       experiencia, logros o posición.
     </p>
     <br />
-    <H2>Reglamentos de Campo de la FIFA</H2>
+    <H4>Reglamentos de Campo de la FIFA</H4>
     <p>
       Dimensiones: La Ley 1 de la FIFA prevé dimensiones de campo externas
       flexibles dentro de una anchura y longitud máximas y mínimas dadas Las
@@ -60,7 +60,7 @@
         manera similar.
       </li>
     </ol>
-    <H2>Todos Juegan</H2>
+    <H4>Todos Juegan</H4>
     <p>
       Todos juegan significa que cada jugador recreativo de cada equipo juega al
       menos el cincuenta por ciento de cada juego. Se anima a los entrenadores
