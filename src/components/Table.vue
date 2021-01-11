@@ -6,9 +6,11 @@
       class="tabla"
       striped
       hover
+      small
+      fixed
       responsive="sm"
     >
-      <template #cell(seleccionar)="row">
+      <template #cell(seleccionar)="row" >
         <router-link to="/Details">
           <b-button
             variant="success"
