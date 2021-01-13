@@ -1,6 +1,6 @@
 <template>
   <div class="logo home">
-    <router-link to="/Home"
+    <router-link to="/login"
       ><img alt="Futbol logo" src="../assets/nysl_logo.png"
     /></router-link>
     <h1>B I E N V E N I D O S</h1>

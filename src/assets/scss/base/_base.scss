@@ -6,6 +6,12 @@ $text-color: white;
 body {
   background-color: $color-secundario;
   color: $text-color;
+    background: linear-gradient(#264653  ,#1d607bb3  );
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <Navbar/>
+    <div v-show="this.$router.path != '/login' && '/signup'">
+      <Navbar/>
+    </div>
     <b-container>
       <transition  name="fade">
         <router-view />

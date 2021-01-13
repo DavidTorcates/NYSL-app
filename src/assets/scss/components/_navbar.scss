@@ -7,7 +7,6 @@
   position: relative;
   top: -12px;
 }
-
 //..... Navbar
 .nav {
 padding:20px 30px 0px 30px;
@@ -23,5 +22,25 @@ color: #D1D7C7 !important;
 }
 .nav a.router-link-exact-active {
 color: #A3FF15 !important;
+}
+.menu{
+  margin-right: 50px;
+}
+.logout{
+    width: 50px;
+    margin: 0px !important;
+    position: absolute;
+    top: 0px;
+    left: 150%;
+    font-size: 1.2em;
+    color: $color-navbar !important;
+    background: $text-color;
+}
+.logout:hover{
+  box-shadow: 0px 0px 5px 1px $color-primario;
+}
+.logout:active{
+  background: $color-primario;
+  transition: 0.4s;
 }
   
