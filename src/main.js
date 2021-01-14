@@ -7,7 +7,8 @@ import firebase from 'firebase'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
-
+//------ Importe de Store
+import store from './store'
 //----- Importe de estilos CSS propios del proyecto
 import './assets/css/main.css';
 //------ Importe de efectos de JS para menu hamburguesa
@@ -31,6 +32,7 @@ firebase.analytics();
 firebase.auth().onAuthStateChanged(function () {
   new Vue({
     router,
+    store,
     render: h => h(App)
   }).$mount('#app')
 });

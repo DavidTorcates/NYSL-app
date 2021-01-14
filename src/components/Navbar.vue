@@ -15,26 +15,26 @@
     <b-collapse id="navbar-toggle-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
         <b-nav-item href="#">
-          <router-link class="nav-item nav-link" to="/Home">Inicio</router-link>
+          <router-link class="nav-item nav-link" to="/Home">{{$store.getters.ObtenerIni}}</router-link>
         </b-nav-item>
         <b-nav-item href="#"
           ><router-link class="nav-item nav-link" to="/Rules"
-            >Reglas y Políticas</router-link
+            >{{$store.getters.ObtenerReg}}</router-link
           ></b-nav-item
         >
         <b-nav-item href="#"
           ><router-link class="nav-item nav-link" to="/Info"
-            >Informacion de Juegos</router-link
+            >{{$store.getters.ObtenerInfo}}</router-link
           ></b-nav-item
         >
         <b-nav-item href="#">
           <router-link class="nav-item nav-link" to="/Contact"
-            >Contacto</router-link
+            >{{$store.getters.ObtenerCont}}</router-link
           ></b-nav-item
         >
         <b-nav-item href="#"
           ><router-link class="nav-item nav-link" to="/About"
-            >Sobre Nosotros</router-link
+            >{{$store.getters.ObtenerNoso}}</router-link
           ></b-nav-item
         >
       </b-navbar-nav>
