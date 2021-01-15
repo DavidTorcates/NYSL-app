@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-      <input v-model="showMessages" type="text" class="mt-3 mr-2 pl-2 pr-2" />
+      <input v-model="showMessage" type="text" class="mt-3 mr-2 pl-2 pr-2" />
       <button class="btn btn-success" @click="sendMessage">Send</button>
     </div>
     {{ $data }}
@@ -26,12 +26,13 @@
 
 <script>
 import firebase from "firebase";
+
 export default {
   name: "Chat",
   data() {
     return {
       name: '',
-      showMessages: '',
+      showMessage: '',
       messages: [],
       datetime: null
     };
@@ -40,29 +41,29 @@ export default {
     sendMessage() {
       //Configuración de fecha y hora
       const today = new Date();
-      const date =
-        today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
-      const time =
-        today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-      const dateTime = date + " " + time;
+      const date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+      const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      const dateTime = date +' '+ time;
+
       this.datetime = dateTime;
+
       //Push de objeto mesaje
       const message = {
         message: this.showMessage,
         username: this.name,
-        datetime: this.datetime,
+        datetime: this.datetime
       };
+      console.log(message);
 
-      firebase
-        .database()
-        .ref("BDChat")
-        .push(message);
+      firebase.database().ref("BDChat").push(message);
 
       this.showMessage = '';
     },
   },
   mounted() {
+
     this.name = firebase.auth().currentUser.email;
+
     firebase
       .database()
       .ref("BDChat")
