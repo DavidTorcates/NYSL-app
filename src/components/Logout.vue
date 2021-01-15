@@ -19,7 +19,8 @@ export default {
           })
           .cath((err) => {
             alert(err);
-        })  
+        }); 
     }
-}}
+}
+}
 </script>
