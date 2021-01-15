@@ -6,6 +6,7 @@ import About from '../views/About.vue'
 import Rules from '../views/Rules.vue'
 import Contact from '../views/Contact.vue'
 import Games from '../views/Games.vue'
+import ChatRoom from '../views/ChatRoom.vue'
 import Login from '../views/Login.vue'
 import SignUp from '../views/SignUp.vue'
 import firebase from 'firebase'
@@ -33,6 +34,14 @@ const router = new VueRouter({
     path: '/About',
     name: 'Sobre Nosotros',
     component: About,
+    meta: {
+      autentication: true
+  }
+  },
+  {
+    path: '/ChatRoom',
+    name: 'Chat Room',
+    component: ChatRoom,
     meta: {
       autentication: true
   }

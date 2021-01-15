@@ -4,7 +4,7 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 export default new Vuex.Store({
     state:{
-        seMuestra: Boolean , 
+        chat:"Chat Room",
         msg: "BIENVENIDOS",
         submsg: "¡Somos la mejor liga de futbol!",
         inicio: "Inicio",
@@ -27,6 +27,9 @@ export default new Vuex.Store({
     actions:{
     },
     getters:{
+        ObtenerChat(state){
+            return state.chat;
+        },
         Obtenermsg(state){
             return state.submsg;
         },

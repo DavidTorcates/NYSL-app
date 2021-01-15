@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <div v-show="this.$router.path != '/login' && '/signup'">
-      <Navbar/>
+    <div v-show="homePage">
+      <Navbar />
     </div>
     <b-container>
-      <transition  name="fade">
+      <transition name="fade">
         <router-view />
       </transition>
     </b-container>
@@ -14,6 +14,16 @@
 <script>
 import Navbar from "./components/Navbar.vue";
 export default {
+  name: "App",
+  computed: {
+    homePage() {
+      if (this.$route.path == ('/') || this.$route.path == "/login" || this.$route.path == "/signup" ) {
+        return false;
+      } else {
+        return true;
+      }
+    },
+  },
   components: { Navbar },
 };
 </script>

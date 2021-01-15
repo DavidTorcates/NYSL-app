@@ -19,6 +19,7 @@ Vue.use(IconsPlugin);
 var firebaseConfig = {
   apiKey: "AIzaSyBAOa9CNWCZ1CH-AfPHt5EBi7eHbb88n1w",
   authDomain: "nysl-bootstrap-vue.firebaseapp.com",
+  databaseURL: "https://nysl-bootstrap-vue-default-rtdb.firebaseio.com",
   projectId: "nysl-bootstrap-vue",
   storageBucket: "nysl-bootstrap-vue.appspot.com",
   messagingSenderId: "76570529386",
