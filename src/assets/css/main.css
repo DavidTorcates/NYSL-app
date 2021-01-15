@@ -63,6 +63,11 @@ body {
 .btn:hover {
   box-shadow: 0px 0px 4px 1.5px #d7c7c798; }
 
+.titule {
+  position: absolute;
+  top: 2%;
+  left: 42%; }
+
 /* components/navbar */
 .navbar-toggler {
   width: 50px;
@@ -182,6 +187,62 @@ body {
 
 .card:hover {
   box-shadow: 0px 0px 10px black; }
+
+.contenedor {
+  background-image: url(../image/fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  width: 40%;
+  height: 545px;
+  position: relative;
+  left: 25%;
+  padding-bottom: 10px; }
+  .contenedor .msg {
+    border-radius: 10px !important;
+    border: none;
+    background: #ade542;
+    width: 70%;
+    position: relative;
+    left: 30%;
+    color: #1d3342;
+    font-weight: 00;
+    text-align: left;
+    padding-left: 10px; }
+    .contenedor .msg p {
+      color: #1d3342; }
+  .contenedor .hora {
+    position: relative;
+    left: 47%;
+    text-align: right;
+    font-size: small; }
+  .contenedor .btn2 {
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 10px;
+    left: 0%;
+    display: inline;
+    box-shadow: 0px 0px 2px 1px #1d3342; }
+    .contenedor .btn2 #icon2 {
+      position: relative;
+      bottom: 3.5px;
+      right: 3.5px;
+      font-size: 2em; }
+  .contenedor .btn2:hover {
+    box-shadow: none;
+    transition: 0.4s; }
+  .contenedor input {
+    border: none;
+    border-radius: 10px;
+    display: inline;
+    width: 80%;
+    right: 2%;
+    padding: 5px;
+    margin-right: 0%;
+    padding-right: 0%;
+    position: relative; }
 
 /* pages/home */
 .container2 {

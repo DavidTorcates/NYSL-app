@@ -14,7 +14,7 @@
         <b-navbar-nav class="ml-auto">
           <b-nav-item href="#">
             <router-link class="nav-item nav-link" to="/Home">{{
-            
+             $store.getters.ObtenerIni
             }}</router-link>
           </b-nav-item>
           <b-nav-item href="#"

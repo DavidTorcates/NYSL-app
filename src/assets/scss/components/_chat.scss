@@ -1,0 +1,64 @@
+//* Componente chat
+.contenedor{
+    background-image: url(../image/fondo.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    width: 40%;
+    height: 545px;
+    position: relative;
+    left: 25%;
+    padding-bottom: 10px;
+    .msg{
+        border-radius: 10px !important;
+        border:none;
+        background: $color-primario;
+        width: 70%;
+        position: relative;
+        left: 30%; 
+        color: $color-navbar;  
+        font-weight: 00;
+        text-align: left;
+        padding-left: 10px;
+        p{
+            color:$color-navbar;
+        }
+    }
+    .hora{
+        position: relative;
+        left: 47%;
+        text-align: right;
+        font-size: small;
+    }
+    .btn2{
+        border-radius: 100%;
+        width: 35px;
+        height: 35px;
+        position: relative;
+        top: 10px;
+        left: 0%;
+        display: inline;
+        box-shadow: 0px 0px 2px 1px $color-navbar;
+        #icon2{
+            position: relative;
+            bottom: 3.5px;
+            right: 3.5px;
+            font-size: 2em;
+        }
+    }
+    .btn2:hover{
+        box-shadow: none;
+        transition: 0.4s;
+    }
+    input{
+        border: none;
+        border-radius: 10px;
+        display: inline;
+        width: 80%;
+        right:2%;
+        padding: 5px;
+        margin-right: 0%;
+        padding-right: 0%;
+        position: relative;
+    }
+}
