@@ -11,7 +11,7 @@
       <div class="card-img-overlay" id="text">
         <p class="card-text" >
           <b>
-            {{ texto }}
+            {{$store.state.txtImg1}}
           </b>
         </p>
       </div>
@@ -27,7 +27,7 @@
       <div class="card-img-overlay" id="text">
         <p class="card-text">
           <b>
-            {{ texto }}
+            {{$store.state.txtImg2}}
           </b>
         </p>
       </div>
@@ -43,7 +43,7 @@
       <div class="card-img-overlay" id="text">
         <p class="card-text">
           <b>
-            {{ texto }}
+            {{$store.state.txtImg3}}
           </b>
         </p>
       </div>
@@ -55,7 +55,6 @@
 export default {
   name: "Img",
   props: {
-    texto: String,
   },
 };
 </script>

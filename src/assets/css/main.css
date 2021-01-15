@@ -1,7 +1,12 @@
 /* base/base */
 body {
   background-color: #264357;
-  color: white; }
+  color: white;
+  background: linear-gradient(#264653, #1d607bb3);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -79,6 +84,26 @@ body {
 .nav a.router-link-exact-active {
   color: #A3FF15 !important; }
 
+.menu {
+  margin-right: 50px; }
+
+.logout {
+  width: 50px;
+  margin: 0px !important;
+  position: absolute;
+  top: 0px;
+  left: 150%;
+  font-size: 1.2em;
+  color: #1d3342 !important;
+  background: white; }
+
+.logout:hover {
+  box-shadow: 0px 0px 5px 1px #ade542; }
+
+.logout:active {
+  background: #ade542;
+  transition: 0.4s; }
+
 /* components/form */
 .form {
   background-color: rgba(255, 255, 255, 0.5);
@@ -144,12 +169,13 @@ body {
     @media only screen and (max-width: 992px) and (orientation: landscape) {
       #Image .card #text {
         color: white;
-        font-size: 12px; } }
+        font-size: 10px;
+        top: 70%; } }
     @media only screen and (max-width: 576px) and (orientation: portrait) {
       #Image .card #text {
         color: white;
         font-size: 8px;
-        top: 55%; } }
+        top: 70%; } }
 
 #Image .card:hover {
   box-shadow: 0px 0px 20px black; }
@@ -158,6 +184,70 @@ body {
   box-shadow: 0px 0px 10px black; }
 
 /* pages/home */
+.container2 {
+  background: rgba(193, 189, 189, 0.421);
+  width: 60%;
+  height: 280px;
+  border-radius: 10px;
+  padding-top: 10px;
+  margin: -2% 25%; }
+  @media only screen and (max-width: 992px) and (orientation: landscape) {
+    .container2 {
+      height: 300px;
+      margin-bottom: 20px;
+      font-size: 11px; } }
+  .container2 .facebook {
+    background: #3467Af;
+    color: #ffff;
+    width: 40%;
+    padding-left: 0%;
+    margin-top: 0px; }
+  .container2 .iconface {
+    color: #ffff !important;
+    position: relative;
+    left: 25px !important; }
+  .container2 .icon {
+    color: #1d3342;
+    font-size: 1.1em;
+    position: relative;
+    left: 22px; }
+  .container2 .icongo {
+    color: rgba(128, 128, 128, 0.637);
+    position: relative;
+    left: 25px; }
+  .container2 .google {
+    color: #1d3342;
+    background: white;
+    width: 40%;
+    margin-bottom: 15px; }
+  .container2 .input {
+    border-radius: 5px;
+    padding-left: 28px;
+    border: none;
+    margin-top: 15px; }
+
+h3, p {
+  color: white;
+  margin-bottom: 0px; }
+
+button {
+  width: 40%;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 5px 0px 1px 2px #5f737a8a;
+  padding: 5px;
+  background: #ade542;
+  color: #264653;
+  font-weight: bold; }
+
+button:active {
+  box-shadow: 2px 0px 1px 2px #41677ac2;
+  transition: 0.2s; }
+
+i {
+  color: #264653;
+  font-style: normal; }
+
 /* components/table */
 .tabla {
   border: none;

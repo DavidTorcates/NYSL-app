@@ -1,0 +1,78 @@
+
+
+.container2{
+   background: rgba(193, 189, 189, 0.421);
+   width: 60%;
+   height: 280px;
+   border-radius: 10px;
+   padding-top: 10px;
+   margin: -2% 25%;
+
+   @media only screen and (max-width: 992px) and (orientation: landscape) {
+    height: 300px;
+    margin-bottom: 20px;
+    font-size: 11px;
+}
+   .facebook{
+       background: #3467Af;
+       color: #ffff;
+       width: 40%;
+       padding-left: 0%;
+       margin-top: 0px;
+   }
+   .iconface{
+       color:#ffff !important;
+       position: relative;
+       left: 25px !important;
+   }
+
+   .icon{
+       color: $color-navbar;
+       font-size: 1.1em;
+       position: relative;
+       left: 22px;
+   }
+   .icongo{
+       color:rgba(128, 128, 128, 0.637);
+       position: relative;
+       left: 25px;
+       
+   }
+   .google{
+       color: $color-navbar;
+       background: white;
+       width: 40%;
+       margin-bottom: 15px;
+   
+   
+    }
+   .input{
+    border-radius: 5px;
+    padding-left: 28px;
+    border: none;
+    margin-top: 15px;
+   }
+}
+h3,p{
+    color: white;
+    margin-bottom: 0px;
+}
+button{
+    width: 40%;
+    border-radius: 10px;
+    border: none;
+    box-shadow:5px 0px 1px 2px #5f737a8a;
+    padding: 5px;
+    background: $color-primario;
+    color:  #264653;
+    font-weight: bold;
+}
+button:active{
+    box-shadow:2px 0px 1px 2px #41677ac2;
+    
+    transition: 0.2s;
+}
+i{
+    color: #264653;
+    font-style: normal;
+}

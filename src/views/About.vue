@@ -1,9 +1,9 @@
 <template>
   <div>
-    <router-link class="navbar-brand" to="/Welcome">
+    <router-link class="navbar-brand" to="/">
         <img id="logoinicio" alt="Futbol logo" src="../assets/nysl_logo.png" />
     </router-link>
-    <Img texto=" Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus vel ab in corrupti rem qui quae, cumque ra " />
+    <Img/>
   </div>
 </template>
 <script>

@@ -1,6 +1,6 @@
 <template>
   <div class="container" id="fondo">
-    <router-link class="navbar-brand" to="/Welcome">
+    <router-link class="navbar-brand" to="/">
         <img id="logoinicio" alt="Futbol logo" src="../assets/nysl_logo.png" />
     </router-link>
     <h3>

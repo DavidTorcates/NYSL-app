@@ -6,45 +6,100 @@ import About from '../views/About.vue'
 import Rules from '../views/Rules.vue'
 import Contact from '../views/Contact.vue'
 import Games from '../views/Games.vue'
+import ChatRoom from '../views/ChatRoom.vue'
+import Login from '../views/Login.vue'
+import SignUp from '../views/SignUp.vue'
+import firebase from 'firebase'
+
 Vue.use(VueRouter)
 
-const routes = [
+const router = new VueRouter({
+  mode : 'history',
+  routes: [
   {
-    path: '/Welcome',
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },{
+    path: '/signup',
+    name: 'SignUp',
+    component: SignUp
+  },
+  {
+    path: '/',
     name: 'Logo',
     component: Logo
   },
   {
     path: '/About',
     name: 'Sobre Nosotros',
-    component: About
+    component: About,
+    meta: {
+      autentication: true
+  }
+  },
+  {
+    path: '/ChatRoom',
+    name: 'Chat Room',
+    component: ChatRoom,
+    meta: {
+      autentication: true
+  }
   },
   {
     path: '/Home',
     name: 'Inicio',
-    component: Home
+    component: Home,
+    meta: {
+      autentication: true
+  }
   },
   {
     path: '/Rules',
     name: 'Reglas y Políticas',
-    component: Rules
+    component: Rules,
+    meta: {
+      autentication: true
+  }
   },
   {
     path: '/Contact',
     name: 'Contacto',
-    component: Contact
+    component: Contact,
+    meta: {
+      autentication: true
+  }
   },
   {
     path: '/Info',
     name: 'Información de Juegos',
-    component: Games
+    component: Games,
+    meta: {
+      autentication: true
+  }
   }
 ]
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
 })
+
+router.beforeEach((to, from, next) => {
+  let user = firebase.auth().currentUser;
+  let autentication = to.matched.some(record => record.meta.autentication);
+
+  if (autentication){
+    if(!user){
+      next('/');
+    }
+    else{
+      next();
+    }
+  }else{next();}
+})
+
+
+//const router = new VueRouter({
+//  mode: 'history',
+//  base: process.env.BASE_URL,
+//  routes
+//})
 
 export default router
