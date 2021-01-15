@@ -7,7 +7,7 @@
       <div class="card">
         <div class="card-body">
           <div
-            class="border pl-2 pt-1 ml-2 message-text mb-2"
+            class="border pl-2 pt-1 ml-2 mb-2"
             v-for="(message, index) in messages"
             :key="index"
           >
@@ -74,7 +74,7 @@ export default {
           messages.push({
             id: key,
             username: data[key].username,
-            message: data[key].text,
+            message: data[key].message,
             datetime: data[key].datetime,
           });
         });
