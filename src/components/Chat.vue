@@ -2,20 +2,14 @@
   <div id="chat ">
     <!--Sección de Chat-->
     <div class="message-body mt-3 contenedor">
-      <div class="card-body">
+      <div class="scroll">
+      <div class="card-body " >
         <div
-          class="pl-2 pt-1 ml-2 mb-2"
+          class="pl-2 pt-1 ml-2 mb-2 "
           v-for="(message, index) in messages"
           :key="index"
         >
-          <div style="background-color: green" v-if="message.esmio = 'green'">
-            <div class="msg">
-              <span class="mg-text">{{ message.username }}</span>
-              <p class="message pt -1">{{ message.message }}</p>
-            </div>
-            <span class="message hora">{{ message.datetime }}</span>
-          </div>
-          <div style="background-color: red" v-else >
+          <div >
             <div class="msg">
               <span class="mg-text">{{ message.username }}</span>
               <p class="message pt -1">{{ message.message }}</p>
@@ -23,6 +17,7 @@
             <span class="message hora">{{ message.datetime }}</span>
           </div>
         </div>
+      </div>
       </div>
       <input
         v-model="showMessage"
@@ -102,3 +97,6 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+
+</style>
