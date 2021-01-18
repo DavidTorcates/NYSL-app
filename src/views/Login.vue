@@ -3,7 +3,7 @@
     <router-link class="navbar-brand" to="/">
       <img id="logoinicio" alt="Futbol logo" src="../assets/nysl_logo.png" />
     </router-link>
-    <div class="container2">
+    <div class="container2 container">
       <h3>Ingreso</h3>
       <b-icon icon="envelope" class ="icon"></b-icon>
       <input class="input" type="email" placeholder="Email" v-model="email" />
@@ -18,10 +18,12 @@
       <br />
       <button class="input" @click="login">Ingresar</button>
       <br />
+       <b-col sm="12" lg="12">
       <b-icon icon="facebook" class ="icon iconface"></b-icon>
-      <button class="input facebook">Continuar con Facebook</button>
+      <button class="input facebook" >Continuar con Facebook</button>
       <b-icon icon="google" class ="icon icongo"></b-icon>
-      <button class="input google">Continuar con Google</button>
+      <button class="input google" >Continuar con Google</button>
+      </b-col>
       <br />
       <p>
         ¿Necesitas una cuenta?

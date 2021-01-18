@@ -84,7 +84,6 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   let user = firebase.auth().currentUser;
   let autentication = to.matched.some(record => record.meta.autentication);
-
   if (autentication){
     if(!user){
       next('/');
@@ -94,12 +93,5 @@ router.beforeEach((to, from, next) => {
     }
   }else{next();}
 })
-
-
-//const router = new VueRouter({
-//  mode: 'history',
-//  base: process.env.BASE_URL,
-//  routes
-//})
 
 export default router

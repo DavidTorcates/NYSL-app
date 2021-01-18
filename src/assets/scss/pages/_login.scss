@@ -1,10 +1,10 @@
 .container2{
    background: rgba(193, 189, 189, 0.421);
    width: 70%;
-   height: 310px;
+   height: 315px;
    border-radius: 10px;
    padding-top: 10px;
-   margin: -2% 25%;
+   margin: -2% 17%;
    margin-top: 2%;
    font-size: 1.3em;
 
@@ -13,17 +13,39 @@
     margin-bottom: 20px;
     font-size: 1em;
 }
+@media only screen and (max-width: 576px) and (orientation: portrait) {
+    height: 310px !important; 
+}
    .facebook{
        background: #3467Af;
        color: #ffff;
        width: 40%;
-       padding-left: 0%;
+       padding-left:0%;
        margin-top: 0px;
+       font-size: .9em;
+       @media only screen and (max-width: 576px) and (orientation: portrait) {
+        width: 70%;
+        font-size: .89em;
+        margin-bottom: 0px;
+   }
+   @media only screen and (max-width: 992px) and (orientation: landscape) {
+    font-size: .65em;
+}
    }
    .iconface{
        color:#ffff !important;
        position: relative;
-       left: 25px !important;
+       left: 35px !important;
+       @media only screen and (max-width: 576px) and (orientation: portrait) {
+        top: 44%;
+        left: 25px !important;
+        position: relative !important;    
+    }
+    @media only screen and (max-width: 992px) and (orientation: landscape) {
+        top: 10px !important;
+        left: 30px !important;
+        position: relative;
+    }
    }
 
    .icon{
@@ -35,13 +57,30 @@
    .icongo{
        color:rgba(128, 128, 128, 0.637);
        position: relative;
-       left: 25px;     
+       left: 35px;     
+       @media only screen and (max-width: 576px) and (orientation: portrait) {
+        top: 48px !important;
+        left: -190px !important;
+        position: relative !important;    
+    }@media only screen and (max-width: 992px) and (orientation: landscape) {
+        top: 10px !important;
+        left: 27px;
+        position: relative;
+    }
    }
    .google{
        color: $color-navbar;
        background: white;
        width: 40%;
-       margin-bottom: 15px;
+       margin-bottom: -10px;
+       @media only screen and (max-width: 576px) and (orientation: portrait) {
+        width: 70%;
+        font-size: .94em;
+        margin-bottom: -10px;    
+   }
+   @media only screen and (max-width: 992px) and (orientation: landscape) {
+    font-size: .65em;
+}
     }
     .inputSignup{
         background-color: $color-primario;
