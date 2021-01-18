@@ -4,7 +4,7 @@
       <img id="logoinicio" alt="Futbol logo" src="../assets/nysl_logo.png" />
     </router-link>
     <div class="container2">
-      <h3>Regristro</h3>
+      <h3>Registro</h3>
       <b-icon icon="envelope" class ="icon"></b-icon>
       <input class="input" type="email" placeholder="Email" v-model="email" />
       <br />
@@ -15,8 +15,8 @@
         placeholder="Password"
         v-model="password"
       />
-     
-      <button class="input" @click="signUp">registrar</button>
+     <br/>
+      <button class="inputSignup" @click="signUp">registrar</button>
       <br />
       
       <br />

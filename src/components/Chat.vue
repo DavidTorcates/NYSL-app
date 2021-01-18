@@ -8,13 +8,15 @@
           class="pl-2 pt-1 ml-2 mb-2 "
           v-for="(message, index) in messages"
           :key="index"
+          :class="['message', sentOrReceived(message.username)]"
         >
-          <div >
-            <div class="msg">
-              <span class="mg-text">{{ message.username }}</span>
+          <div  >
+            <p class="mg-text usuario">{{ message.username }}</p>
+            <div class="msg" >
+              
               <p class="message pt -1">{{ message.message }}</p>
             </div>
-            <span class="message hora">{{ message.datetime }}</span>
+            <p class="message hora">{{ message.datetime }}</p>
           </div>
         </div>
       </div>
@@ -72,6 +74,9 @@ export default {
 
       this.showMessage = "";
     },
+    sentOrReceived(userUID) {
+      return userUID === this.name ? 'sent' : 'received'
+    },
   },
   mounted() {
     this.name = firebase.auth().currentUser.email;
@@ -85,7 +90,6 @@ export default {
 
         Object.keys(data).forEach((key) => {
           messages.push({
-            esmio: data[key].username === this.name ? "green" : "red",
             id: key,
             username: data[key].username,
             message: data[key].message,

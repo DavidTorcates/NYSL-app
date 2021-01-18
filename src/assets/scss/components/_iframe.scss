@@ -7,6 +7,13 @@
   .mapa {
     border-radius: 20px;
     width: 80%;
+    @media only screen and (max-width: 992px) and (orientation: landscape) {
+      
+    }
+    @media only screen and (max-width: 576px) and (orientation: portrait) {
+      width: 102%;
+      margin-left: -3px;
+      margin-top: 10px;
   }
 }
- 
+}

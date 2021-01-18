@@ -1,6 +1,6 @@
 <template>
   <div class="container" id="fondo">
-    <h4 class="titule">Reglas y Políticas</h4>
+    <h4 class="titule2">Reglas y Políticas</h4>
     <router-link class="navbar-brand" to="/">
         <img id="logoinicio" alt="Futbol logo" src="../assets/nysl_logo.png" />
     </router-link>

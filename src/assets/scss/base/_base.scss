@@ -72,6 +72,25 @@ body {
       text-align: justify;
       width: 60%;
     }
+    @media only screen and (max-width: 992px) and (orientation: landscape) {
+      
+    }
+    @media only screen and (max-width: 576px) and (orientation: portrait) {
+      width: 103%;
+      margin-left: -5px;
+      p{
+        width: 90%;
+        margin-left: 5%;
+      }
+      ol{
+        width: 90%;
+        margin-left: 5%;
+      }
+      ul{
+        width: 90%;
+        margin-left: 5%;
+      }
+    }
   }
 }
 .btn {
@@ -82,9 +101,23 @@ body {
 .btn:hover {
   box-shadow: 0px 0px 4px 1.5px #d7c7c798;
 }
- .titule{
+ .titule2{
    position: absolute;
    top: 2%;
    left: 42%;
+   @media only screen and (max-width: 992px) and (orientation: landscape) {
+    color: $text-color;
+    font-size: 25px;
+    top: 6%;
+    position: absolute;
+    left: 10%;
+  }
+  @media only screen and (max-width: 576px) and (orientation: portrait) {
+    color: $text-color;
+    font-size: 15px;
+    top: 3%;
+    position: absolute;
+    left: 20%;
+  }
  }
  

@@ -1,17 +1,17 @@
-
-
 .container2{
    background: rgba(193, 189, 189, 0.421);
-   width: 60%;
-   height: 280px;
+   width: 70%;
+   height: 310px;
    border-radius: 10px;
    padding-top: 10px;
    margin: -2% 25%;
+   margin-top: 2%;
+   font-size: 1.3em;
 
    @media only screen and (max-width: 992px) and (orientation: landscape) {
     height: 300px;
     margin-bottom: 20px;
-    font-size: 11px;
+    font-size: 1em;
 }
    .facebook{
        background: #3467Af;
@@ -30,28 +30,40 @@
        color: $color-navbar;
        font-size: 1.1em;
        position: relative;
-       left: 22px;
+       left: 28px;
    }
    .icongo{
        color:rgba(128, 128, 128, 0.637);
        position: relative;
-       left: 25px;
-       
+       left: 25px;     
    }
    .google{
        color: $color-navbar;
        background: white;
        width: 40%;
        margin-bottom: 15px;
-   
-   
+    }
+    .inputSignup{
+        background-color: $color-primario;
+        margin-top: 20px;
+        @media only screen and (max-width: 992px) and (orientation: landscape) {            
+               background-color:$color-primario !important;
+               margin-top: 35px;
+       }
     }
    .input{
     border-radius: 5px;
-    padding-left: 28px;
+    padding-left: 38px;
     border: none;
     margin-top: 15px;
    }
+    @media only screen and (max-width: 576px) and (orientation: portrait) {
+     width: 105%;
+     margin-top: 40px;
+     height: 290px;
+     margin-left: -8px;
+     font-size: .94em;
+}
 }
 h3,p{
     color: white;
@@ -68,8 +80,7 @@ button{
     font-weight: bold;
 }
 button:active{
-    box-shadow:2px 0px 1px 2px #41677ac2;
-    
+    box-shadow:2px 0px 1px 2px #41677ac2;  
     transition: 0.2s;
 }
 i{
