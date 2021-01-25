@@ -6,7 +6,14 @@
     <div class="container2">
       <h3>Registro</h3>
       <b-icon icon="envelope" class ="icon"></b-icon>
-      <input class="input" type="email" placeholder="Email" v-model="email" />
+      <input class="input" 
+      type="text" 
+      placeholder="Email" 
+      v-model="email" 
+      maxlength="15"
+      minlength="7"
+      pattern=".+@nysl.com"
+      />
       <br />
       <b-icon icon="lock" class="icon"></b-icon>
       <input
@@ -25,6 +32,9 @@
         <router-link to="/login"> <i>Iniciar sesión</i> </router-link>
       </p>
     </div>
+    <pre>
+      {{$data}}
+    </pre>
   </div>
 </template>
 <script>
@@ -34,8 +44,14 @@ export default {
   data() {
     return {
       email: "",
+      arrobaValue: this.arrobaFunction,
       password: "",
     };
+  },
+  computed: {
+    arrobaFunction() {
+     return this.email.includes("user");
+    }
   },
   methods: {
     signUp: function () {
@@ -54,7 +70,7 @@ export default {
              alert("Ingresa correctamente todos los datos");
           }
         );
-    },
-  },
+    }
+  }
 };
 </script>

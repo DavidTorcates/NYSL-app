@@ -4,9 +4,12 @@
       <img id="logoinicio" alt="Futbol logo" src="../assets/nysl_logo.png" />
     </router-link>
     <div class="container2 container">
+      <form
+      id="app"
+      >
       <h3>Ingreso</h3>
       <b-icon icon="envelope" class ="icon"></b-icon>
-      <input class="input" type="email" placeholder="Email" v-model="email" />
+      <input class="input email" type="email" placeholder="Email" v-model="email" />
       <br />
       <b-icon icon="lock" class="icon"></b-icon>
       <input
@@ -16,7 +19,7 @@
         v-model="password"
       />
       <br />
-      <button class="input" @click="login">Ingresar</button>
+      <button class="input" type="submit" @click="login">Ingresar</button>
       <br />
        <b-col sm="12" lg="12">
       <b-icon icon="facebook" class ="icon iconface"></b-icon>
@@ -29,11 +32,20 @@
         ¿Necesitas una cuenta?
         <router-link to="/signup"> <i>Registrate</i> </router-link>
       </p>
+        </form>
+    </div>
+    <div
+    v-if="error"
+    class="error"
+    style="color: red; margin-top: 70px; font-size: 3em"
+    >
+        MALISIMO
     </div>
   </div>
 </template>
 <script>
 import firebase from "firebase";
+//import { component } from 'vue/types/umd';
 export default {
   name: "Login",
   data() {
@@ -60,5 +72,10 @@ export default {
         );
     },
   },
+  computed: {
+    error(){
+      return this.email.trim().length < 7;
+    }
+  }
 };
 </script>
