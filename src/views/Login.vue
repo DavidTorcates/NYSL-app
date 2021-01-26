@@ -6,7 +6,7 @@
     <div class="container2 container">
       <h3>Ingreso</h3>
       <b-icon icon="envelope" class ="icon"></b-icon>
-      <input class="input" type="email" placeholder="Email" v-model="email" />
+      <input class="input" type="email" placeholder="Ingrese Email" v-model="email" />
       <br />
       <b-icon icon="lock" class="icon"></b-icon>
       <input
