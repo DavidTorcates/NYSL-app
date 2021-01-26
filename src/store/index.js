@@ -27,6 +27,7 @@ export default new Vuex.Store({
     actions:{
     },
     getters:{
+        
         ObtenerChat(state){
             return state.chat;
         },

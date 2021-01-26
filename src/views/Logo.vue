@@ -8,6 +8,7 @@
   </div>
 </template>
 
+
 <style lang="scss">
 #logoinicio {
   width: 50px;
