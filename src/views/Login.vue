@@ -14,7 +14,7 @@
       <b-icon icon="lock" class="icon"></b-icon>
       <input
         class="input"
-        type="password"
+        type="text"
         placeholder="Password"
         v-model="password"
       />
@@ -34,18 +34,10 @@
       </p>
         </form>
     </div>
-    <div
-    v-if="error"
-    class="error"
-    style="color: red; margin-top: 70px; font-size: 3em"
-    >
-        MALISIMO
-    </div>
   </div>
 </template>
 <script>
 import firebase from "firebase";
-//import { component } from 'vue/types/umd';
 export default {
   name: "Login",
   data() {
@@ -63,7 +55,8 @@ export default {
         .then(
           (user) => {
             user.data;
-            this.$router.replace("Home");
+            alert("estas dentro");
+            this.$router.replace("/Home");
           },
           (err) => {
             err;
@@ -71,11 +64,6 @@ export default {
           }
         );
     },
-  },
-  computed: {
-    error(){
-      return this.email.trim().length < 7;
-    }
   }
 };
 </script>

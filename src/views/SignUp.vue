@@ -24,9 +24,11 @@
         v-model="password"
       />
      <br/>
+
      <div v-if="arrobaFunction" class="arrobaValidation">
-       El formato del email está correcto
+       Debe ingresar un @
      </div>
+
       <button class="inputSignup" @click="signUp">registrar</button>
       <br />
       
@@ -36,9 +38,7 @@
         <router-link to="/login"> <i>Iniciar sesión</i> </router-link>
       </p>
     </div>
-    <pre>
-      {{$data}}
-    </pre>
+    
   </div>
 </template>
 <script>
@@ -54,7 +54,7 @@ export default {
   },
   computed: {
     arrobaFunction() {
-     return this.email.includes("@") == true;
+     return this.email.includes("@") == false ;
     }
   },
   methods: {

@@ -12,12 +12,11 @@ const wrapper = shallowMount(SignUp, {
     stubs: ['router-link','router-view'] });
 
 describe('Casos de Prueba para SignUp', ()  => {
+
   test('Comprobar si el username tiene @', () =>{
-
+    //si tiene el @
     wrapper.setData({email : "user@user.com"})
-      expect(wrapper.find('.arrobaValidation').exists()).toBe(false);
-
-     
+      expect(wrapper.find('.arrobaValidation').exists()).toBe(false);   
   })
 
   
