@@ -4,6 +4,9 @@
       <img id="logoinicio" alt="Futbol logo" src="../assets/nysl_logo.png" />
     </router-link>
     <div class="container2 container">
+      <form
+      id="app"
+      >
       <h3>Ingreso</h3>
       <b-icon icon="envelope" class ="icon"></b-icon>
       <input class="input" type="email" placeholder="Ingrese Email" v-model="email" />
@@ -11,12 +14,12 @@
       <b-icon icon="lock" class="icon"></b-icon>
       <input
         class="input"
-        type="password"
+        type="text"
         placeholder="Password"
         v-model="password"
       />
       <br />
-      <button class="input" @click="login">Ingresar</button>
+      <button class="input" type="submit" @click="login">Ingresar</button>
       <br />
        <b-col sm="12" lg="12">
       <b-icon icon="facebook" class ="icon iconface"></b-icon>
@@ -29,6 +32,7 @@
         ¿Necesitas una cuenta?
         <router-link to="/signup"> <i>Registrate</i> </router-link>
       </p>
+        </form>
     </div>
   </div>
 </template>
@@ -51,7 +55,8 @@ export default {
         .then(
           (user) => {
             user.data;
-            this.$router.replace("Home");
+            alert("estas dentro");
+            this.$router.replace("/Home");
           },
           (err) => {
             err;
@@ -59,6 +64,6 @@ export default {
           }
         );
     },
-  },
+  }
 };
 </script>
