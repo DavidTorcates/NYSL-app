@@ -10,7 +10,9 @@
 
   export default {
     methods: {
-      ...mapActions(['actionClick']),
+      ...mapActions([
+        'actionClick'
+        ]),
       actionInputIfTrue: function actionInputIfTrue(event) {
         const inputValue = event.target.value
         if (inputValue === 'input') {

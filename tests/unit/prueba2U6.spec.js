@@ -2,9 +2,11 @@ import { shallowMount } from '@vue/test-utils'
 
 const App = {
     template: `
+    <div>
       <router-link to="/posts">Go to posts</router-link>
       <router-view />
-    `
+    </div>
+      `
   }
   
   test('routing', () => {

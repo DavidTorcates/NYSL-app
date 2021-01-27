@@ -1,24 +1,18 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-
-Vue.use(Vuex);
-export default new Vuex.Store({
+export default {
     state:{
-        count: 0,
+        clicks: 2
     },
     mutations:{
-        increment (state) {
-            state.count++
+        INCREMENT_MODULE_ACTION_CLICKS (state) {
+            state.clicks++
           }
     },
     actions:{
-        moduleActionClick (state) {
-            state.commit('increment')
+        moduleActionClick ({ commit }) {
+            commit('INCREMENT_MODULE_ACTION_CLICKS')
           }
     },
     getters:{
-        moduleClicks(state){
-            return state.count;
-        }
+        moduleClicks: state => state.clicks
     }
-})
+}

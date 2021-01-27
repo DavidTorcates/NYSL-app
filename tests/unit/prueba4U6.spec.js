@@ -1,21 +1,29 @@
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
+import VueRouter from 'vue-router'
+import Test from    '../../src/components/Test.vue'
+const localVue = createLocalVue()
+
+localVue.use(VueRouter)
 
 const App = {
     template: `
-      <router-link to="/some/path">Go to posts</router-link>
-      <router-view />
+        <div>
+            <router-link to="/some/path">Go to posts
+            </router-link>
+            <router-view />
+        </div>
     `
 }
 
 const $route = {
-    path: '/some/path'
+    path: '/Home'
 }
 // /some/path
 test('routing', () => {
-    const wrapper = shallowMount(App, {
+    const wrapper = shallowMount(Test, {
         mocks: {
             $route
         }
     })
-    expect(wrapper.vm.$route.path).toContain('/some/path')
+    expect(wrapper.vm.$route.path).toContain('/Home')
 })
