@@ -1,6 +1,10 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import VueRouter from 'vue-router'
 
+const localVue = createLocalVue()
+const router = new VueRouter()
+localVue.use(VueRouter)
+
 const App = {
     template: `
     <div>
@@ -9,10 +13,6 @@ const App = {
     </div>
       `
   }
-
-const localVue = createLocalVue()
-localVue.use(VueRouter)
-const router = new VueRouter()
 
 test('routing', () => {
     const wrapper = shallowMount(App, {
