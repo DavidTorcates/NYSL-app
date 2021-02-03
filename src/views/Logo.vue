@@ -1,7 +1,7 @@
 <template>
   <div class="logo home">
     <router-link to="/login"
-      ><img alt="Futbol logo" src="../assets/nysl_logo.png"
+      ><img data-cy="logo" alt="Futbol logo" src="../assets/nysl_logo.png"
     /></router-link>
     <h1>{{$store.state.msg}}</h1>
     <h4>{{$store.getters.Obtenermsg}}</h4>

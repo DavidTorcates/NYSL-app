@@ -2,7 +2,7 @@
   <div>
     <h4 class="titule2">Información de Juego</h4>
     <router-link class="navbar-brand" to="/">
-        <img id="logoinicio" alt="Futbol logo" src="../assets/nysl_logo.png" />
+        <img id="logoinicio" alt="Futbol logo" data-cy="logo" src="../assets/nysl_logo.png" />
     </router-link>
     
     <b-row>

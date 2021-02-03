@@ -1,7 +1,7 @@
 <template >
   <div id="login">
     <router-link class="navbar-brand" to="/">
-      <img id="logoinicio" alt="Futbol logo" src="../assets/nysl_logo.png" />
+      <img id="logoinicio" alt="Futbol logo" data-cy="logo" src="../assets/nysl_logo.png" />
     </router-link>
     <div class="container2">
       <h3>Registro</h3>

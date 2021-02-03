@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div v-show="homePage">
-      <Navbar />
+      <Navbar data-cy="navbar" />
     </div>
     <b-container>
       <transition name="fade">

@@ -2,14 +2,14 @@
   <div class="container" id="fondo">
     <h4 class="titule2">Reglas y Políticas</h4>
     <router-link class="navbar-brand" to="/">
-        <img id="logoinicio" alt="Futbol logo" src="../assets/nysl_logo.png" />
+        <img id="logoinicio" data-cy="logo" alt="Futbol logo" src="../assets/nysl_logo.png" />
     </router-link>
     <h3>
       Las reglas de la FIFA regirán el juego de NYSL excepto según se modifique
       en el presente documento
     </h3>
     <br />
-    <H4>Deportividad</H4>
+    <h4>Deportividad</h4>
     <p>
       El interés común que comparten los miembros de la Asociación es inspirar a
       los jóvenes a practicar los ideales de deportividad y juego limpio.
@@ -61,7 +61,7 @@
         manera similar.
       </li>
     </ol>
-    <H4>Todos Juegan</H4>
+    <h4>Todos Juegan</h4>
     <p>
       Todos juegan significa que cada jugador recreativo de cada equipo juega al
       menos el cincuenta por ciento de cada juego. Se anima a los entrenadores
@@ -81,7 +81,7 @@
 
 <script>
 export default {
-  name: "Home",
+  name: "Rules",
   components: {},
 };
 </script>
